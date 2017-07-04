@@ -30,7 +30,7 @@ class PinsController < ApplicationController
 
     respond_to do |format|
       if @pin.save
-        format.html { redirect_to @pin, notice: 'Pin utworzony pomyślnie.' }
+        format.html { redirect_to pins_path, notice: 'Pin utworzony pomyślnie.' }
         format.json { render :show, status: :created, location: @pin }
       else
         format.html { render :new }

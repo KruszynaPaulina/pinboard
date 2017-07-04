@@ -1,4 +1,13 @@
+<div class="jumbotron"> 
+<h1>Witaj w mojej aplikacji!</h1>
+<p>Niebawem rzuci wszystkich na kolana...</p>
+<%= link_to 'Strona główna', root_path, class: 'btn btn-primary' %>
+<%= link_to 'O mnie', home_about_path, class: 'btn btn-default' %> 
+</div>
+
+<div id="pins" class="transitions-enabled">
 <% @pins.each do |pin| %>
+<div class="box">
   <%= link_to image_tag(pin.image.url(:medium)), pin %><br />
   <%= pin.title %><br />
   <%= pin.description %><br />
@@ -6,8 +15,9 @@
         <%= link_to 'Edit', edit_pin_path(pin) %><br />
         <%= link_to 'Destroy', pin, method: :delete, data: { confirm: 'Are you sure?' } %><br />
       <% end %>
+      </div>
 <% end %>
-
+</div>
 <br>
 
 <%= link_to 'New Pin', new_pin_path %>
