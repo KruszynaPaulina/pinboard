@@ -17,13 +17,15 @@ toggle="collapse" data-target="#bs-examplenavbar-collapse-1">
    
    <ul class="nav navbar-nav">
             <li class="active"><%= link_to 'Strona główna', root_path %> </li>
-            <li><%= link_to 'O mnie', home_about_path %> </li> 
+            <li><%= link_to 'O mnie', home_about_path %> </li>
+            <li><%= link_to 'Lista pinów', pins_path %> </li>
             
           </ul>
           
 <ul class="nav navbar-nav navbar-right"> 
 
 <% if user_signed_in? %> 
+<li><%= link_to 'Nowy pin', new_pin_path %> </li>
 <li><%= link_to 'Edycja profilu', edit_user_registration_path %></li> 
 <li><%= link_to 'Wylogowanie', destroy_user_session_path, method: :delete %></li> 
 <% else %> 
