@@ -27,7 +27,7 @@ toggle="collapse" data-target="#bs-examplenavbar-collapse-1">
 <% if user_signed_in? %> 
 <li><%= link_to 'Nowy pin', new_pin_path %> </li>
 <li><%= link_to 'Edycja profilu', edit_user_registration_path %></li> 
-<li><%= link_to 'Wylogowanie', destroy_user_session_path, method: :delete %></li> 
+<li><%= link_to 'Wylogowanie', destroy_user_session_path, method: :delete, data: { confirm: 'Jesteś pewien, że chcesz się wylogować?' } %></li> 
 <% else %> 
 <li><%= link_to "Logowanie", new_user_session_path %></li> 
 <li><%= link_to "Rejestracja", new_user_registration_path %></li> 
