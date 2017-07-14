@@ -2,6 +2,11 @@
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
+  
+  <div class="form-group"> 
+  <%= f.label :login, "Login" %><br />
+  <%= f.text_field :login, autofocus: true %> 
+  </div>
 
   <div class="field">
     <%= f.label :email %><br />

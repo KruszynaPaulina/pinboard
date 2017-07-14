@@ -7,3 +7,6 @@ $ ->
   $('#pins').masonry 
     itemSelector: '.box' 
     isFitWidth: true
+    
+$(document).on 'page:reload', mansory
+$(document).ready mansory 

@@ -17,6 +17,7 @@
             <br />
           <div class="panel-body">  
             <%= pin.title %>
+            <br/><strong><%= pin.user.login if pin.user %></strong> <br/>
           </div>
             <% if pin.user == current_user %>
               <div class="panel-footer">
