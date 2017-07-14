@@ -13,19 +13,17 @@
     <% @pins.each do |pin| %>
       <div class="box">
         <div class="panel panel-default">
-          <div class="panel-heading">
-
-            <%= link_to image_tag(pin.image.url(:medium)), pin %><br />
-          </div>
-          <div class="panel-body">
+          <%= link_to image_tag(pin.image.url(:medium)), pin %>
+            <br />
+          <div class="panel-body">  
             <%= pin.title %>
           </div>
-          <div class="panel-footer">
             <% if pin.user == current_user %>
-              <%= link_to 'Edit', edit_pin_path(pin) %><br />
-              <%= link_to 'Destroy', pin, method: :delete, data: { confirm: 'Are you sure?' } %><br />
+              <div class="panel-footer">
+                <%= link_to 'Edit', edit_pin_path(pin) %><br />
+                <%= link_to 'Destroy', pin, method: :delete, data: { confirm: 'Are you sure?' } %>
+              </div>
             <% end %>
-          </div>
         </div>
       </div>
     <% end %>
@@ -35,5 +33,8 @@
 </div>
 <div class="panel-footer">
 <%= link_to 'New Pin', new_pin_path %>
+  <div class="center>
+    <%= will_paginate @pins, renderer: BootstrapPagination::Rails %>
+  </div>
 </div>
 </div>
