@@ -2,11 +2,9 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
-$ ->
+document.addEventListener 'turbolinks:load', ->
  $('#pins').imagesLoaded -> 
-  $('#pins').masonry 
+   $('#pins').masonry 
     itemSelector: '.box' 
     isFitWidth: true
-    
-$(document).on 'page:reload', mansory
-$(document).ready mansory 
+

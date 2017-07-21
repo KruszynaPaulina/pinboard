@@ -11,19 +11,19 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :title %><br>
-    <%= f.text_field :title %>
+    <%= f.text_field :title, class: 'form-control' %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :description %><br>
-    <%= f.text_area :description %>
+    <%= f.text_area :description, class: 'form-control' %>
   </div>
   <div class="form-group"> 
   <%= f.label :image, "Obraz" %> 
   <%= f.file_field :image, class: "form-control" %> 
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit 'Dodaj', class: 'btn btn-primary' %>
   </div>
 <% end %>
