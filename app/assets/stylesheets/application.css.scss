@@ -1,0 +1,88 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require 'masonry/transitions'
+ *= require_tree .
+ *= require_self
+ */
+ 
+.panel-footer {
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 0px;
+    border-width: 2px 0px 0px 0px;
+    border-style: solid;
+    border-color: #00535f;
+    text-align: center;
+    background: #c41e99;
+    border-radius: 0px 0px 8px 8px;
+}
+
+.panel-default {
+    border-radius: 10px;
+	box-shadow: 5px 5px 5px #777777;
+	border-width: 2px 2px 2px 2px;
+    border-style: solid;
+    border-color: #00535f;
+    
+.panel-body {
+}
+    
+}
+.panel-default > .panel-heading {
+    background: #c41e99;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 8px;
+    border-width: 0px 0px 2px 0px;
+    border-style: solid;
+    border-color: #00535f;
+}
+
+.panel-default > .box_glowny {
+    text-align: center;
+    padding-bottom: 20px;
+    border-width: 0px 0px 2px 1px;
+}
+
+.box_body {
+    background: #efefef;
+}
+.motto {
+    color: white;
+    margin: 0px 0px 15px 0px;
+}
+
+.alert {
+    border-color: #00535f;
+    border-radius: 10px;
+    border-width: 2px;
+    box-shadow: 5px 5px 5px #777777;
+    text-align: center;
+}
+
+.a1 {
+   border-color: #00535f; 
+   border-radius: 10px;
+   border-width: 2px;
+   background: #aacee2;
+   border-style: solid;
+   padding: 0px 5px 5px 30px;
+   
+}
+
+.q1 { 
+    margin: 5px 15px 30px 15px;
+    text-align: center;
+}

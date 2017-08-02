@@ -1,27 +1,77 @@
 <div class="row"> 
-<div class="col-md-offset-2 col-md-8"> 
+<div class="col-md-offset-3 col-md-6">
+    <% flash.each do |name, msg| %>
+    <%= content_tag(:div, msg, class: "alert alert-info") %>
+    <% end %>
+</div>
+</div>
+
+<div class="row"> 
+<div class="col-md-offset-3 col-md-6"> 
 <div class="panel panel-default"> 
-<div class="panel-heading center"><h3><%= @pin.title %></h3></div>
+<div class="panel-heading">
+  <div class="p1"> 
+    <div class="row q2"> 
+      <div class="col-md-1"> 
+        <div class="pinezka">
+          <span class="glyphicon glyphicon glyphicon-pushpin" aria-hidden="true"></span>
+        </div>
+      </div>
+      <div class="col-md-6"> 
+        Pin przypięty przez:<br />
+        <strong><%= @pin.user.login %></strong>
+      </div>
+      <div class="col-md-4 q3">
+        <span class="glyphicon glyphicon glyphicon-calendar" aria-hidden="true"></span> <%= @pin.created_at.strftime('%d-%m-%Y') %><br />
+        <span class="glyphicon glyphicon glyphicon-time" aria-hidden="true"></span> <%= @pin.created_at.strftime('%H:%M') %>
+      </div>
+      <div class="col-md-1"> 
+      <%= link_to '', pins_path, class: 'btn btn-primary glyphicon glyphicon-remove' %>
+      </div>
+    </div>
+  </div></div>
 <div class="panel-body">
-  <p class="center">
-  <%= image_tag @pin.image.url(:medium) %>
-  </p>
-  <hr />
-  <p>
-  <strong>Opis pinu:</strong>
-  <%= @pin.description %>
-  </p>
-  <p>
-  <strong>Pin dodany przez:</strong>
-  <%= @pin.user.login %><br/> 
-  </p>
+  <div class="obraz">
+    <%= image_tag @pin.image.url(:large) %>
+  </div>
+  <div class="tytul">
+    <h1><%= @pin.title %></h1>
+  </div>
+  <div class="opis_pinu">
+    <h4><strong>
+      Opis pinu: 
+    </strong></h4> 
+    <%= @pin.description %>
+  </div>
+  
+  
+<div class="p1">
+  <h4><strong> Komentarze: </strong>( <%= @pin.coms.count %> <span class="glyphicon glyphicon glyphicon-comment" aria-hidden="true"></span> )
+  </h4>
+  <div class="coms">
+  <%= render @pin.coms %>
+  </div>
+  <div class="q1"><h4><strong>
+        Chcesz dodać komentarz? 
+        </strong>
+      </h4>
+      </div>
+    <% if user_signed_in? %>
+    
+      <%= render "coms/form" %>
+    <% else %> 
+      <div>
+      <%= link_to 'Zaloguj się', new_user_session_path, class: 'btn btn-primary btn-block' %>
+      </div>
+    <% end %>
+</div>
 
 </div>
 <div class="panel-footer">
 <% if @pin.user == current_user %>
-<%= link_to 'Edytuj pin', edit_pin_path(@pin) %> |
+<%= link_to 'Edytuj pin', edit_pin_path(@pin), class: 'btn btn-primary' %>
 <% end %>
-<%= link_to 'Powrót', pins_path %>
+<%= link_to 'Powrót', pins_path, class: 'btn btn-primary' %>
 
 </div> 
 </div> 

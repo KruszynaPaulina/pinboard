@@ -1,0 +1,26 @@
+<div class="com row">
+  
+  <div class="col-md-3 d1"> 
+    <span class="glyphicon glyphicon glyphicon-user" aria-hidden="true"></span> <strong><%= com.user.login %></strong><br />
+    <span class="glyphicon glyphicon glyphicon-calendar" aria-hidden="true"></span> <%= com.created_at.strftime('%d-%m-%Y') %><br />
+    <span class="glyphicon glyphicon glyphicon-time" aria-hidden="true"></span> <%= com.created_at.strftime('%H:%M') %>
+  </div>
+    
+  <div class="col-md-6 d1">
+    <div class="f2">
+      <%= com.content %>
+    </div>
+  </div>
+    <% if user_signed_in? %>
+      <% if com.user_id == current_user.id %>
+        <div class="col-md-3 d1">
+          <div class="f1">
+            <br />
+            <%= link_to 'Usuń', [com.pin, com], method: :delete, data: { confirm: 'Czy jesteś pewien, że chcesz usunąć ten komentarz?' }, class: 'btn btn-primary btn-xs' %>
+            <%= link_to 'Edytuj', edit_pin_com_path(com.pin, com), class: 'btn btn-primary btn-xs' %>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+
+</div>

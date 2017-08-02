@@ -1,0 +1,6 @@
+<%= form_for([@pin, @pin.coms.build]) do |f| %>
+ <%= f.label :content, "Treść komentarza:" %><br />
+ <%= f.text_area :content, class: 'form-control' %>
+ <br />
+ <%= f.submit 'Dodaj komentarz', class: 'btn btn-primary btn-block' %>
+<% end %>

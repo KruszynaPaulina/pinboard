@@ -4,19 +4,104 @@
 
 #pins { 
     margin: 0 auto;
- 
-    
 } 
-
 .box { 
-    margin: 5px; 
-    width: 214px; 
-    
-    
+    margin: 6px; 
+    width:  201px; 
+    border-radius: 10px;
+	box-shadow: 3px 3px 3px 3px #ccc;
 } 
-
 .box img { 
     width: 100%; 
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 8px;
+    border-width: 0px 0px 2px 0px;
+    border-style: solid;
+    border-color: #00535f;
+}
+.obraz {
+    margin: 15px;
+    border-width: 2px 2px 2px 2px;
+    border-style: solid;
+    border-color: #00535f;
     
-    
+}
+.obraz img {
+    width: 100%;
+}
+.p1 {
+    margin: 15px;
+} 
+.pinezka {
+    text-align: center;
+}
+.coment {
+    text-align: center;
+    border-width: 2px 0px 2px 0px;
+    border-style: dotted;
+    padding: 9px 0px 5px 0px;
+    border-color: #00535f;
+    margin: 1px;
+}
+.tytul {
+    text-align: center;
+    font-family: Fanstasy, fantasy;
+    font-size: 24px;
+    font-weight: bold;
+    color: #c41e99;
+    margin: 0px 0px 9px 0px;
+}
+.panel-default > .stopka {
+    text-align: center;
+    background: #c41e99;
+    border-radius: 0px 0px 8px 8px;
+}
+.dodane {
+    margin: 13px 0px 0px 0px;
+    text-align: center;
+}
+.hm {
+   font-weight: bold; 
+}
+.opis_pinu {
+    margin: 15px;
+    border-width: 2px 0px 2px 0px;
+    border-style: dotted;
+    border-color: #00535f;
+    padding: 10px 0px 10px 0px;
+    text-align: justify;
+}
+
+.coms {
+    margin: 18px 0px 0px 0px;
+    border-width: 1px 2px 1px 2px;
+    border-style: solid;
+    border-color: #00535f;
+}
+.com {
+    border-width: 1px 0px 1px 0px;
+    border-style: solid;
+    border-color: #00535f;
+    margin: 0px 0px 0px 0px;
+}
+.d1 {
+    padding: 7px;
+}
+
+.f1 {
+    text-align: center;
+}
+.f2 {
+    text-align: justify;
+}
+.q1 {
+    margin: 15px 0px 15px 0px;
+}
+.q2 {
+    margin: 0px 15px 0px 15px;
+}
+.q3 {
+    text-align: right;
 }
