@@ -17,16 +17,16 @@
           <span class="glyphicon glyphicon glyphicon-pushpin" aria-hidden="true"></span>
         </div>
       </div>
-      <div class="col-md-6"> 
+      <div class="col-md-6 v1"> 
         Pin przypięty przez:<br />
-        <strong><%= @pin.user.login %></strong>
+       <p class="hm"><%= @pin.user.login %></p>
       </div>
-      <div class="col-md-4 q3">
+      <div class="col-md-4 q3 v1">
         <span class="glyphicon glyphicon glyphicon-calendar" aria-hidden="true"></span> <%= @pin.created_at.strftime('%d-%m-%Y') %><br />
         <span class="glyphicon glyphicon glyphicon-time" aria-hidden="true"></span> <%= @pin.created_at.strftime('%H:%M') %>
       </div>
       <div class="col-md-1"> 
-      <%= link_to '', pins_path, class: 'btn btn-primary glyphicon glyphicon-remove' %>
+      <%= link_to '', pins_path, class: 'btn btn-info glyphicon glyphicon-remove v2' %>
       </div>
     </div>
   </div></div>
