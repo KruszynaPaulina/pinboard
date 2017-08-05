@@ -1,0 +1,20 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.u1 {
+    color: white;
+}
+
+.u2 {
+    border-style: solid;
+    border-color: #00535f;
+    border-width: 2px 0px 2px 0px;
+    margin: 0px -15px 20px -15px;
+    padding: 0px 0px 14px 0px;
+    background: #c41e99; /* Old Browsers */
+    background: -webkit-linear-gradient(top,#c41e99,#00535f); /*Safari 5.1-6*/
+    background: -o-linear-gradient(top,#c41e99,#00535f); /*Opera 11.1-12*/
+    background: -moz-linear-gradient(top,#c41e99,#00535f); /*Fx 3.6-15*/
+    background: linear-gradient(to bottom, #c41e99, #00535f); /*Standard*/
+}

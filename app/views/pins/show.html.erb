@@ -19,7 +19,7 @@
       </div>
       <div class="col-md-6 v1"> 
         Pin przypięty przez:<br />
-       <p class="hm"><%= @pin.user.login %></p>
+       <p class="hm"><%= link_to @pin.user.login, user_path(@pin.user.id) %></p>
       </div>
       <div class="col-md-4 q3 v1">
         <span class="glyphicon glyphicon glyphicon-calendar" aria-hidden="true"></span> <%= @pin.created_at.strftime('%d-%m-%Y') %><br />
