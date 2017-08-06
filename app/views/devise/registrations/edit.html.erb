@@ -16,17 +16,27 @@
 </div>
 
 <div class="panel-body">
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put, multipart: true }) do |f| %>
 
 
   <div class="form-group"> 
   <%= f.label :login, "Login:" %><br />
   <%= f.text_field :login, autofocus: true, class: 'form-control' %> 
   </div>
+  
+  <div class="form-group"> 
+  <%= f.label :avatar, "Avatar:" %><br />
+  <%= f.file_field :avatar, autofocus: true, class: 'form-control' %> 
+  </div>
 
   <div class="form-group">
     <%= f.label :email, "Email:" %><br />
     <%= f.email_field :email, autofocus: true, class: 'form-control' %>
+  </div>
+  
+  <div class="form-group">
+    <%= f.label :bio, "Biografia:" %> (napisz coś o sobie, jesli nie chcesz pozostaw to pole puste)<br />
+    <%= f.text_area :bio, autofocus: true, class: 'form-control' %>
   </div>
 
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
@@ -34,15 +44,15 @@
   <% end %>
 
   <div class="form-group">
-    <%= f.label :password, "Hasło:" %> (pozostaw puste, jeżeli nie chcesz go zmieniać)<br />
+    <%= f.label :password, "Hasło:" %> (pozostaw puste pole, jeżeli nie chcesz zmieniać hasła)<br />
     <%= f.password_field :password, autocomplete: "off", class: 'form-control' %>
     <% if @minimum_password_length %>
     (minimum <%= @minimum_password_length %> znaków)
     <% end %>
   </div>
 
-  <div class="form-group">
-    <%= f.label :password_confirmation, "Powtórz hasło:" %><br />
+  <div class="form-group"> 
+    <%= f.label :password_confirmation, "Powtórz hasło:" %> (pozostaw puste pole, jeżeli nie chcesz zmieniać hasła)<br />
     <%= f.password_field :password_confirmation, autocomplete: "off", class: 'form-control' %>
   </div>
 

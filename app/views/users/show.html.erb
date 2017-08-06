@@ -3,10 +3,21 @@
 
 <div class="panel-body box_body">
     
-    <div>
-        Login: <%= @user.login %> <br />
-        Email: <%= @user.email %> <br />
-        <% @user.pins.count %>
+    <div class="row o3">
+        <div class="col-md-4"> 
+            <div class="o1">
+                <%= image_tag @user.avatar.url(:medium) %>
+            </div>
+        </div>
+        <div class="col-md-8"> 
+            <div class="o2">
+                <strong>Login:</strong> <%= @user.login %> <br />
+                <strong>Email:</strong> <%= @user.email %> <br />
+                <div class="o4">
+                    <%= @user.bio %> 
+                </div>
+        </div>
+        </div>
     </div>
     
     <div class="u2">

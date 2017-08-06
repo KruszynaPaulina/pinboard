@@ -11,24 +11,42 @@
 <div class="panel panel-default"> 
 <div class="panel-heading">
   <div class="p1"> 
-    <div class="row q2"> 
-      <div class="col-md-1"> 
-        <div class="pinezka">
-          <span class="glyphicon glyphicon glyphicon-pushpin" aria-hidden="true"></span>
-        </div>
-      </div>
-      <div class="col-md-6 v1"> 
-        Pin przypięty przez:<br />
-       <p class="hm"><%= link_to @pin.user.login, user_path(@pin.user.id) %></p>
-      </div>
-      <div class="col-md-4 q3 v1">
-        <span class="glyphicon glyphicon glyphicon-calendar" aria-hidden="true"></span> <%= @pin.created_at.strftime('%d-%m-%Y') %><br />
-        <span class="glyphicon glyphicon glyphicon-time" aria-hidden="true"></span> <%= @pin.created_at.strftime('%H:%M') %>
-      </div>
-      <div class="col-md-1"> 
-      <%= link_to '', pins_path, class: 'btn btn-info glyphicon glyphicon-remove v2' %>
-      </div>
+  
+    <div class="row"> 
+            <div class="col-md-2"> 
+            
+                  <div class="pinezka">
+                    <%= image_tag @pin.user.avatar.url(:thumb) %>
+                  </div>
+              
+            </div>
+            
+            <div class="col-md-5"> 
+            
+                  <div class="v1"> 
+                    Pin przypięty przez:<br />
+                    <p class="hm"><%= link_to @pin.user.login, user_path(@pin.user.id) %></p>
+                  </div>
+                  
+            </div>
+            
+            <div class="col-md-3">
+              
+              <div class="q3 v1">
+              <span class="glyphicon glyphicon glyphicon-calendar" aria-hidden="true"></span> <%= @pin.created_at.strftime('%d-%m-%Y') %><br />
+              <span class="glyphicon glyphicon glyphicon-time" aria-hidden="true"></span> <%= @pin.created_at.strftime('%H:%M') %>
+              </div>
+            
+            </div>
+            
+            
+            <div class="col-md-2">
+              <div class="m2">
+                <%= link_to '', pins_path, class: 'btn btn-info glyphicon glyphicon-remove v2' %>
+              </div> 
+            </div>
     </div>
+    
   </div></div>
 <div class="panel-body">
   <div class="obraz">
