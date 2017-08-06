@@ -13,8 +13,10 @@ class ComsController < ApplicationController
     @com.user_id = current_user.id
     
     if @com.save
+      flash[:notice] = "Komentarz dodany pomyśnie!"
       redirect_to pin_path(@pin)
     else
+      flash[:notice] = "Nie udało się dodać komentarza!"
       render 'new'
     end
   end
@@ -24,14 +26,17 @@ class ComsController < ApplicationController
 
 	def update
 	  if @com.update(com_params)
+	    flash[:notice] = "Komentarz zmieniony pomyśnie!"
 	    redirect_to pin_path(@pin)
 		else
+		  flash[:notice] = "Nie udało się edytować komentarza!"
 			render 'edit'
 	  end
 	end
 
 	def destroy
 		@com.destroy
+		flash[:notice] = "Komentarz usunięty!"
 		redirect_to pin_path(@pin)
 	end
   
