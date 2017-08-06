@@ -49,7 +49,7 @@
                             </div>
                              
                             <div class="col-md-5"> 
-                                 <span class="glyphicon glyphicon glyphicon-heart" aria-hidden="true"></span>
+                                 <%= pin.likes.count %> <span class="glyphicon glyphicon glyphicon-heart" aria-hidden="true"></span>
                             </div>
                         </div>
                     
@@ -69,6 +69,10 @@
                             <%= link_to 'Edytuj pin', edit_pin_path(pin), class: 'btn btn-primary btn-xs' %>
                             <%= link_to 'Usuń pin', pin, method: :delete, data: { confirm: 'Czy jesteś pewien, że chcesz usunąć ten pin?' }, class: 'btn btn-primary btn-xs' %>
                         </div>
+                    <% else %> 
+                        <div class="panel-footer stopka">
+                      <%= link_to 'Lubię to', like_pin_path(pin), method: :post, class: 'btn btn-primary btn-xs' %>
+                      </div>
                     <% end %>
                 </div>
                   

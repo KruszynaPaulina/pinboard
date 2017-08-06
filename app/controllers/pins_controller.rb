@@ -1,7 +1,18 @@
 class PinsController < ApplicationController
-  before_action :set_pin, only: [:show, :edit, :update, :destroy]
+  before_action :set_pin, only: [:show, :edit, :update, :destroy, :like]
   before_action :authenticate_user!, except: [:index, :show]
   before_action :correct_user, only: [:edit, :update, :destroy]
+
+  def like
+    @like = @pin.likes.build(user_id: current_user.id)
+    if @like.save
+      flash[:notice] = "Polubiłeś ten pin!"
+      redirect_to pins_path
+    else
+      flash[:notice] = "Nie udało Ci się polubić tego pinu, ponieważ juz wcześniej go polubiłeś!"
+      redirect_to pins_path
+    end
+  end
 
   # GET /pins
   # GET /pins.json

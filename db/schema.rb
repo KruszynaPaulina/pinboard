@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170806112655) do
+ActiveRecord::Schema.define(version: 20170806171056) do
 
   create_table "comments", force: :cascade do |t|
     t.text     "content"
@@ -34,6 +34,13 @@ ActiveRecord::Schema.define(version: 20170806112655) do
 
   add_index "coms", ["pin_id"], name: "index_coms_on_pin_id"
   add_index "coms", ["user_id"], name: "index_coms_on_user_id"
+
+  create_table "likes", force: :cascade do |t|
+    t.integer  "pin_id"
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "pins", force: :cascade do |t|
     t.string   "title"

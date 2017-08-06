@@ -3,7 +3,13 @@ Rails.application.routes.draw do
 
   resources :pins do 
     resources :coms
+     
+     member do 
+      post '/like' => 'pins#like'
+    end
+    
   end
+  
   devise_for :users
   root 'home#index'
   get 'home/about'
