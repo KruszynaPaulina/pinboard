@@ -49,7 +49,7 @@
                         <div class="dodane">
                             Przypięte przez: 
                             <br />
-                                <div class="hm">
+                                <div class="hm1">
                                     <%= link_to pin.user.login, user_path(pin.user.id)  %>
                                 </div>
                         </div>
@@ -61,6 +61,11 @@
                             <%= link_to 'Edytuj pin', edit_pin_path(pin), class: 'btn btn-primary btn-xs' %>
                             <%= link_to 'Usuń pin', pin, method: :delete, data: { confirm: 'Czy jesteś pewien, że chcesz usunąć ten pin?' }, class: 'btn btn-primary btn-xs' %>
                         </div>
+                    <% else %> 
+                        <div class="panel-footer stopka">
+                      <%= link_to '', like_pin_path(pin), method: :post, class: 'btn btn-primary btn-xs glyphicon glyphicon-heart' %>
+                      
+                      </div>
                     <% end %>
                 </div>
                   
