@@ -5,7 +5,11 @@ $input-border-focus: #c41e99;
 $alert-info-bg: #aacee2;
 $alert-info-text: #00535f;
 $btn-info-bg: #c41e99;
-
+$pagination-active-bg: #00535f; 
+$pagination-active-border: #00535f;
+$pagination-border: #00535f;
+$pagination-hover-border: #00535f; 
+$pagination-disabled-border: #00535f;
 
 @import "bootstrap-sprockets"; 
 @import "bootstrap";

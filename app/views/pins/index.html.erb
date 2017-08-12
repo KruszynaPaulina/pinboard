@@ -5,7 +5,7 @@
 </div>
 
 
-<div class="panel panel-default glowny_panel"> 
+<div class="panel panel-default glowny_panel" id="t4"> 
 
 
     <div class="panel-heading box_glowny">
@@ -17,9 +17,8 @@
         <div class="motto v1">
             " ... get inspired by what people love, and show them what inspires you... "
         </div>
-            <%= link_to 'Strona główna', root_path, class: 'btn btn-primary' %>
+            <%= link_to 'Tablica główna', root_path, class: 'btn btn-primary' %>
             <%= link_to 'O mnie', home_about_path, class: 'btn btn-primary' %> 
-            <%= link_to 'Lista pinów', pins_path, class: 'btn btn-primary' %>
                 <% if user_signed_in? %>
                     <%= link_to 'Nowy pin', new_pin_path, class: 'btn btn-primary' %>
                     <%= link_to 'Edytuj profil', edit_user_registration_path, class: 'btn btn-primary' %>
@@ -83,7 +82,8 @@
     
     
     <div class="panel-footer stopka">
-        
+        <div><%= will_paginate @pins, renderer: BootstrapPagination::Rails, class: 'nn hm1' %></div>
+        <div><%= link_to 'Początek strony', "#t4_path", class: 'btn btn-primary'%></div>
     </div>
       
 </div>

@@ -108,4 +108,21 @@
     box-shadow: 1px 1px 2px black;
 }
 
+.nn {
+    border-color: #00535f; 
+    border-radius: 6px;
+    border-width: 2px;
+    background: #aacee2;
+    border-style: solid;
+   
+}
 
+.linkiOMnie {
+    
+    a:link, a:visited {
+    color: #c41e99
+    }
+    a:hover, a:active {
+    color:  #00535f;
+    }
+}

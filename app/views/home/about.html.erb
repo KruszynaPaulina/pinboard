@@ -1,2 +1,107 @@
-<h1>O mnie...</h1> 
-<p>Nazywam się Paulina i tworzę aplikację Pinboard</p>
+<div class="row"> 
+    <div class="col-md-offset-3 col-md-6">
+        <% flash.each do |name, msg| %>
+        <%= content_tag(:div, msg, class: "alert alert-info") %>
+        <% end %>
+    </div>
+</div>
+
+<div class="row"> 
+    <div class="col-md-offset-3 col-md-6"> 
+    
+        <div class="panel panel-default"> 
+        
+            <div class="panel-heading">
+                <h1 class="f1 v1" id="t1">
+                    O autorze ...
+                </h1>
+            </div>
+                
+            <div class="panel-body linkiOMnie">
+                
+                <div>
+                    <strong>Imie:</strong> Paulina <br />
+                    <strong>Nazwisko:</strong> Kruszyna <br />
+                    <strong>Email:</strong> <%= mail_to "kruszyna.paulina@gmail.com", "kruszyna.paulina@gmail.com" %> <br />
+                    <br />
+                    
+                    <p class="f1">
+                        <strong>
+                            Aplikacja <%= link_to 'Pinboard', root_path %> powstała w ramach studiów podyplomowych - "Programowanie aplikacji webowych" i stanowi projekt zaliczeniowy. 
+                        </strong>
+                    </p>
+                    <br />
+                </div>
+                
+                <div class="u2">
+                <h1 class="f1 v1 u1"> O aplikacji ...</h1>
+                </div>
+                
+                <div>
+                    <p class="f1">
+                        <strong>
+                            Aplikacja <%= link_to 'Pinboard', root_path %> jest to serwis społecznościowy umożliwiający 
+                            użytkownikom kolekcjonowanie i dzielenie się z innymi inspiracjami
+                            w formie zjęć (tzw. pinów) przypiętych do głównej tablicy.
+                        </strong>
+                    </p>
+                    <br />
+                    
+                    <p class="f2">
+                        Działanie oraz przeznaczenie serwisu wzorowane jest na popularnych 
+                        aplikacjach takich jak <%= link_to "Pinterest", "https://pl.pinterest.com/", target: "_blank", data: { confirm: "Jesteś pewień, że chcesz otworzyć stronę serwisu Pinterest w nowej zakładce?" } %> 
+                        oraz polska <%= link_to "Zszywka", "http://zszywka.pl/", target: "_blank", data: { confirm: "Jesteś pewień, że chcesz otworzyć stronę serwisu Zszywka w nowej zakładce?" } %>. 
+                    </p>
+                    
+                    <p class="f2">
+                        Aplikacja umożliwia między innymi: logowanie do serwisu, 
+                        edytowanie profilu, dodawanie zdjęć do tablicy głównej,
+                        oglądanie zdjęć i profilów innych użytkowników, a także 
+                        komentowanie tych zdjęć oraz tak zwane "polubienie" ich. 
+                    </p>
+                    
+                    <p class="f2">
+                        Aplikacja powstała z wykorzystaniem frameworku Ruby on Rails
+                        oraz została wystylizowana między innymi za pomocą komponentów 
+                        Bootstrap, biblioteki jQuery Masonry czy preprocesorów SASS. 
+                    </p>
+                    
+                    <p class="f2">
+                        Nazwa aplikacji powstała poprzez połączenie dwóch słów:
+                        "pin" - przypiąć, pinezka oraz "board" - tablica. 
+                    </p>
+                    
+                    <h3>Korzystanie z aplikacji:</h3>
+                    Jeśli jesteś użytkownikiem niezalogowanym, możesz jedynie:
+                    <ul>
+                        <li>oglądać <%= link_to 'tablicę główną', root_path %>, czyli wszystkie zdjęcia dodane przez użytkowników w formie pinów;</li>
+                        <li>oglądać poszczególne piny, a tym samym poznać ich autora lub przeczytać dodane do niego komentarze;</li>
+                        <li>przeglądać profile autorów pinów lub komentarzy;</li>
+                        <li>zobaczyć stronę "<%= link_to 'O mnie', home_about_path %>";</li>
+                        <li><%= link_to "zarejestrować się", new_user_registration_path %> lub <%= link_to "zalogować", new_user_session_path %>.</li>
+                    </ul>
+                        
+                    Jęśli jednak jesteś już zarejestrowany w serwisie oraz zdąrzyłeś się już zalogować, to możesz dodatkowo:
+                    
+                    <ul>
+                        <li>edytować swój profil lub usunąć konto;</li>
+                        <li>dodać nowy pin;</li>
+                        <li>edytować lub usuwać piny;</li>
+                        <li>dodawać, edytować lub usuwać komentarze;</li>
+                        <li>"polubić" piny innych uzytkowników.</li>
+                    </ul>
+
+                
+                </div>
+                
+            </div>
+            
+            <div class="panel-footer">
+                <%= link_to 'Tablica główna', root_path, class: 'btn btn-primary' %>
+                <%= link_to 'Początek strony', "#t1_path", class: 'btn btn-primary'%>
+            </div>
+            
+        </div>
+        
+    </div>
+</div>
