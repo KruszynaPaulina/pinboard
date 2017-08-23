@@ -1,0 +1,21 @@
+Aplikacja Pinboard jest to serwis społecznościowy umożliwiający użytkownikom kolekcjonowanie i dzielenie się z innymi inspiracjami w formie zdjęć (tzw. pinów) przypiętych do głównej tablicy. 
+
+Działanie oraz przeznaczenie serwisu wzorowane jest na popularnych aplikacjach takich jak Pinterest oraz polska Zszywka. 
+Aplikacja umożliwia między innymi: logowanie do serwisu, edytowanie profilu, dodawanie zdjęć do tablicy głównej, oglądanie zdjęć i profilów innych użytkowników, a także komentowanie tych zdjęć oraz tak zwane "polubienie" ich. 
+Aplikacja powstała z wykorzystaniem frameworku Ruby on Rails oraz została wystylizowana między innymi za pomocą komponentów Bootstrap, biblioteki jQuery Masonry czy preprocesorów SASS. 
+Nazwa aplikacji powstała poprzez połączenie dwóch słów: "pin" - przypiąć, pinezka oraz "board" - tablica. 
+
+Korzystanie z aplikacji:
+Jeśli jesteś użytkownikiem niezalogowanym, możesz jedynie: 
+- oglądać tablicę główną, czyli wszystkie zdjęcia dodane przez użytkowników w formie pinów;
+- oglądać poszczególne piny, a tym samym poznać ich autora lub przeczytać dodane do niego komentarze;
+- przeglądać profile autorów pinów lub komentarzy;
+- zobaczyć stronę "O mnie";
+- zarejestrować się lub zalogować.
+
+Jeśli jednak jesteś już zarejestrowany w serwisie oraz zdążyłeś się już zalogować, to możesz dodatkowo: 
+- edytować swój profil lub usunąć konto;
+- dodawać nowe pinygi;
+- edytować lub usuwać piny;
+- dodawać, edytować lub usuwać komentarze;
+- "polubić" piny innych uzytkowników.
